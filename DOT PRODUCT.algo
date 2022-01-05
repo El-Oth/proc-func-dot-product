@@ -1,0 +1,32 @@
+ALGORITHM dot_product
+VAR
+ tab1: array_integer[1];
+ tab2: array_integer[1];
+
+BEGIN
+    FUNCTION ortho(var T1 :array_integer[1] ,var T2 :array_integer[1]) : STRING
+    VAR
+    ps :INTEGER
+    BEGIN
+    ps := T1[0]*T2[0]+T1[1]*T2[1];
+        IF (ps == 0) THEN
+        msg:= ("the vectors are orthogonal")
+        ELSE
+        msg:= ("the vectors aren't orthogonal")
+        END_IF
+        return msg
+    END
+    write(ortho(tab1,tab2))
+END
+
+BEGIN 
+ PROCEDURE ortho(t1,T2: array_integer)
+ VAR
+    tab2,tab2: array_integer[0..2];
+ BEGIN
+   ps:=0;
+
+     IF (tab1[0]*tab2[0]+tab1[1]*tab2[2] == 0) THEN
+      write("the vectors are orthogonal")
+     END_IF
+ END
